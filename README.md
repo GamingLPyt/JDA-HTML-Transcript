@@ -48,31 +48,31 @@ as markdown like **bold**, *italic*, ~~strikethrough~~, `code` and more.
 Normal Usage:
 
 ```java
-Transcript transcript=new Transcript();
-        MessageChannel channel=jda.getTextChannelById("123456789"); // The channel you want to create a transcript of
-        TextChannel outputChannel=jda.getTextChannelById("987654321"); // The channel where the transcript will be sent
+Transcript transcript = new Transcript();
+MessageChannel channel = jda.getTextChannelById("123456789"); // The channel you want to create a transcript of
+TextChannel outputChannel = jda.getTextChannelById("987654321"); // The channel where the transcript will be sent
 
-        transcript.createTranscript(channel,outputChannel);
+transcript.createTranscript(channel,outputChannel);
 ```
 
+
 More options usage:
-
 ```java
-Transcript transcript=new Transcript();
-        MessageChannel channel=jda.getTextChannelById("123456789"); // The channel you want to create a transcript of
-        TextChannel outputChannel=jda.getTextChannelById("987654321"); // The channel where the transcript will be sent
-        String fileName="transcript.html"; // The name of the file
+Transcript transcript = new Transcript();
+MessageChannel channel = jda.getTextChannelById("123456789"); // The channel you want to create a transcript of
+TextChannel outputChannel = jda.getTextChannelById("987654321"); // The channel where the transcript will be sent
+String fileName = "transcript.html"; // The name of the file
 
-        transcript.createTranscript(channel,outputChannel,fileName);
+transcript.createTranscript(channel,outputChannel,fileName);
 ```
 
 Or with InputStream return:
 
 ````java
-Transcript transcript=new Transcript();
-        MessageChannel channel=jda.getTextChannelById("123456789"); // The channel you want to create a transcript of
+Transcript transcript = new Transcript();
+MessageChannel channel = jda.getTextChannelById("123456789"); // The channel you want to create a transcript of
 
-        InputStream transcriptStream=transcript.createTranscript(channel);
+InputStream transcriptStream = transcript.createTranscript(channel);
 
 // Do something with the stream
 ````
