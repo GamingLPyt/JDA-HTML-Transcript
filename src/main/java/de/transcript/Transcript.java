@@ -96,8 +96,8 @@ public class Transcript {
                     color = "#FFFFFF";
                 else {
                     final Member member = ((GuildChannel) channel).getGuild().getMember(author);
-                    if (member.getRoles().size() > 0) color = Formatter.toHex(member.getRoles().get(0).getColor());
-                    else color = "#FFFFFF";
+                    if (member == null) color = "#FFFFFF";
+                    else color = member.getColor() == null ? "#FFFFFF" : Formatter.toHex(member.getColor());
                 }
 
                 final Element referenceContent = document.createElement("div");
