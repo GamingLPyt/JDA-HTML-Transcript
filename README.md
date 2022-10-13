@@ -41,8 +41,6 @@ The output is a HTML file that contains the messages of the channel.
 We support images, attachments, embeds, links, and reactions. Messages are processed
 as markdown like **bold**, *italic*, ~~strikethrough~~, `code` and more.
 
-![Output Example](https://camo.githubusercontent.com/731952f7424ed9e745fb311c73781c9fb2d214985c5689f686e482de2ffd5beb/68747470733a2f2f696d672e6465726f636b2e6465762f3566357130612e706e67)
-
 ## Example
 
 Normal Usage:
@@ -52,7 +50,7 @@ Transcript transcript = new Transcript();
 MessageChannel channel = jda.getTextChannelById("123456789"); // The channel you want to create a transcript of
 TextChannel outputChannel = jda.getTextChannelById("987654321"); // The channel where the transcript will be sent
 
-transcript.createTranscript(channel,outputChannel);
+transcript.createTranscript(channel, outputChannel);
 ```
 
 
@@ -63,7 +61,7 @@ MessageChannel channel = jda.getTextChannelById("123456789"); // The channel you
 TextChannel outputChannel = jda.getTextChannelById("987654321"); // The channel where the transcript will be sent
 String fileName = "transcript.html"; // The name of the file
 
-transcript.createTranscript(channel,outputChannel,fileName);
+transcript.createTranscript(channel, outputChannel, fileName);
 ```
 
 Or with InputStream return:
