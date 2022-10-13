@@ -13,11 +13,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.URL;
+import java.io.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Arrays;
 import java.util.Collection;
@@ -508,9 +504,9 @@ public class Transcript {
         return new ByteArrayInputStream(document.outerHtml().getBytes());
     }
 
-    private File findFile(final String fileName) {
-        final URL url = this.getClass().getClassLoader().getResource(fileName);
-        if (url == null) throw new IllegalArgumentException("file is not found: " + fileName);
-        return new File(url.getFile());
+    private File findFile(final String fileName) throws FileNotFoundException {
+        final File file = new File("./" + fileName);
+        if (!file.exists()) throw new FileNotFoundException("File not found: " + fileName);
+        return file;
     }
 }
